@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://detaildoctorofgaffney.com/service-Starting-Rates</loc>
-        <lastmod>2022-03-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://detaildoctorofgaffney.com/service-Interior-Detailing</loc>
         <lastmod>2022-03-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -68,6 +61,13 @@
 
     <url>
         <loc>https://detaildoctorofgaffney.com/service-Full-Detail-Service</loc>
+        <lastmod>2022-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://detaildoctorofgaffney.com/service-Starting-Rates</loc>
         <lastmod>2022-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
