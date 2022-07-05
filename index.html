@@ -942,7 +942,7 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 5,
+        amountOfImages: 6,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
@@ -1030,6 +1030,25 @@
         <div
             class="absolute inset-0"
             x-show="activeImage === 5"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c10c0840-f6f9-4cd6-be73-7a90aebba551.jpeg"
+                    alt="Auto Detailing company Detail Doctor in Gaffney, SC"
+                />
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 6"
             x-transition:enter="transition duration-1000"
             x-transition:enter-start="transform translate-x-full"
             x-transition:enter-end="transform translate-x-0"
@@ -1650,7 +1669,7 @@ Trucks/SUVS and Large Vans start at $60
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 25,
+        amountOfImages: 32,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1671,7 +1690,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/fa7f4551-c885-497a-a4b7-1affd5909626.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c10c0840-f6f9-4cd6-be73-7a90aebba551.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1688,7 +1707,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c301111d-7e9e-4fae-8efd-ee5380c5145a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ca030b6b-bfe3-4abf-96e6-741f94d6cfbb.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1705,7 +1724,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9850a48c-046a-47da-87b2-24ff6b199485.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/59316f1b-bea0-4254-b9c9-c836e5525e1c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1722,7 +1741,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0cf0ddaa-ac7a-4e25-838c-324d46bd1b88.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/fa7f4551-c885-497a-a4b7-1affd5909626.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1739,7 +1758,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/8d37a97a-b33f-42d0-b5f8-a4363e531bc6.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c301111d-7e9e-4fae-8efd-ee5380c5145a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1756,7 +1775,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/835e314a-dda0-4964-914d-f64d5cdf50f2.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0cf0ddaa-ac7a-4e25-838c-324d46bd1b88.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1773,7 +1792,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c5b56d62-ff88-4112-af3b-98c7f30f8464.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9850a48c-046a-47da-87b2-24ff6b199485.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1790,7 +1809,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/4d4ca863-5111-45b1-bd81-f28810a86145.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/8d37a97a-b33f-42d0-b5f8-a4363e531bc6.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1807,7 +1826,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/dd0e7a83-8bb4-426e-93c1-b01b6b31da08.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/835e314a-dda0-4964-914d-f64d5cdf50f2.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1824,7 +1843,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c7ceed5b-7fc9-409d-a56e-c7cdd685eb03.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/4d4ca863-5111-45b1-bd81-f28810a86145.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1841,7 +1860,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9ee0bf0c-6c6a-4640-9a94-479515902bed.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c5b56d62-ff88-4112-af3b-98c7f30f8464.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1858,7 +1877,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/58349f1c-04fc-45b6-97b6-9ec251f8112d.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/dd0e7a83-8bb4-426e-93c1-b01b6b31da08.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1875,7 +1894,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/3f2b8712-abe8-451d-8836-4c57add80e59.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c7ceed5b-7fc9-409d-a56e-c7cdd685eb03.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1892,7 +1911,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/85a64bd6-33fb-4843-9698-f81c1707984b.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/9ee0bf0c-6c6a-4640-9a94-479515902bed.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1909,7 +1928,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a53b9267-7dd2-468c-9c2d-439329a5109e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/58349f1c-04fc-45b6-97b6-9ec251f8112d.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1926,7 +1945,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e47d9e4b-d3c0-4143-b38b-7286eb9efa21.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/85a64bd6-33fb-4843-9698-f81c1707984b.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1943,7 +1962,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 16; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/211146fb-3069-4b31-aa4b-26466c0926b3.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/3f2b8712-abe8-451d-8836-4c57add80e59.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1960,7 +1979,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 17; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ca0192ca-b36d-4930-8c1a-84ced0b1c268.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a53b9267-7dd2-468c-9c2d-439329a5109e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1977,7 +1996,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 18; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/563d6d46-4ef0-42b5-a23e-654e56a4a71c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/e47d9e4b-d3c0-4143-b38b-7286eb9efa21.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -1994,7 +2013,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 19; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/eb66ad8a-bdca-4ab4-8f17-64d90e3d1a91.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/b1e68e3a-c955-4631-9eb0-3c0199dfb16c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2011,7 +2030,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 20; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/2998d3f2-b85f-43ee-98ea-e31ae60af884.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ca0192ca-b36d-4930-8c1a-84ced0b1c268.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2028,7 +2047,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 21; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ab755727-709a-406a-afa8-89047f17b670.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/211146fb-3069-4b31-aa4b-26466c0926b3.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2045,7 +2064,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 22; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1f7ca5e7-05a8-4861-950c-a09f8ab88c72.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/eb66ad8a-bdca-4ab4-8f17-64d90e3d1a91.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2062,7 +2081,7 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 23; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/78a37b17-33d0-4932-b6dc-b3e39265873a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/563d6d46-4ef0-42b5-a23e-654e56a4a71c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2079,7 +2098,126 @@ Trucks/SUVS and Large Vans start at $60
                     <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/378ea86e-41eb-4b35-a4c0-cad172417b7e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 25; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1f7ca5e7-05a8-4861-950c-a09f8ab88c72.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 26; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ab755727-709a-406a-afa8-89047f17b670.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 27; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/2998d3f2-b85f-43ee-98ea-e31ae60af884.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 28; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/4692111f-4374-4437-8a72-e38a5ba72ae8.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 29; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/78a37b17-33d0-4932-b6dc-b3e39265873a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 30; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
                                 <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6b910570-14b1-4034-ab99-965ad5e4d928.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 31; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/67584d00-7c2a-40a4-9fc6-6831795fbcec.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                             
                         </div>
 
@@ -2136,175 +2274,224 @@ Trucks/SUVS and Large Vans start at $60
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fa7f4551-c885-497a-a4b7-1affd5909626.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c10c0840-f6f9-4cd6-be73-7a90aebba551.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c301111d-7e9e-4fae-8efd-ee5380c5145a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ca030b6b-bfe3-4abf-96e6-741f94d6cfbb.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9850a48c-046a-47da-87b2-24ff6b199485.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/59316f1b-bea0-4254-b9c9-c836e5525e1c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 3">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0cf0ddaa-ac7a-4e25-838c-324d46bd1b88.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fa7f4551-c885-497a-a4b7-1affd5909626.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 4">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8d37a97a-b33f-42d0-b5f8-a4363e531bc6.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c301111d-7e9e-4fae-8efd-ee5380c5145a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 5">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/835e314a-dda0-4964-914d-f64d5cdf50f2.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0cf0ddaa-ac7a-4e25-838c-324d46bd1b88.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 6">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c5b56d62-ff88-4112-af3b-98c7f30f8464.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9850a48c-046a-47da-87b2-24ff6b199485.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 7">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4d4ca863-5111-45b1-bd81-f28810a86145.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8d37a97a-b33f-42d0-b5f8-a4363e531bc6.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 8">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/dd0e7a83-8bb4-426e-93c1-b01b6b31da08.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/835e314a-dda0-4964-914d-f64d5cdf50f2.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 9">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c7ceed5b-7fc9-409d-a56e-c7cdd685eb03.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4d4ca863-5111-45b1-bd81-f28810a86145.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 10">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9ee0bf0c-6c6a-4640-9a94-479515902bed.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c5b56d62-ff88-4112-af3b-98c7f30f8464.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 11">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/58349f1c-04fc-45b6-97b6-9ec251f8112d.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/dd0e7a83-8bb4-426e-93c1-b01b6b31da08.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 12">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3f2b8712-abe8-451d-8836-4c57add80e59.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c7ceed5b-7fc9-409d-a56e-c7cdd685eb03.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 13">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/85a64bd6-33fb-4843-9698-f81c1707984b.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9ee0bf0c-6c6a-4640-9a94-479515902bed.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 14">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a53b9267-7dd2-468c-9c2d-439329a5109e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/58349f1c-04fc-45b6-97b6-9ec251f8112d.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 15">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e47d9e4b-d3c0-4143-b38b-7286eb9efa21.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/85a64bd6-33fb-4843-9698-f81c1707984b.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 16">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/211146fb-3069-4b31-aa4b-26466c0926b3.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3f2b8712-abe8-451d-8836-4c57add80e59.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 17">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ca0192ca-b36d-4930-8c1a-84ced0b1c268.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a53b9267-7dd2-468c-9c2d-439329a5109e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 18">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/563d6d46-4ef0-42b5-a23e-654e56a4a71c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e47d9e4b-d3c0-4143-b38b-7286eb9efa21.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 19">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb66ad8a-bdca-4ab4-8f17-64d90e3d1a91.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b1e68e3a-c955-4631-9eb0-3c0199dfb16c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 20">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2998d3f2-b85f-43ee-98ea-e31ae60af884.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ca0192ca-b36d-4930-8c1a-84ced0b1c268.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 21">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ab755727-709a-406a-afa8-89047f17b670.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/211146fb-3069-4b31-aa4b-26466c0926b3.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 22">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1f7ca5e7-05a8-4861-950c-a09f8ab88c72.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb66ad8a-bdca-4ab4-8f17-64d90e3d1a91.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 23">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/78a37b17-33d0-4932-b6dc-b3e39265873a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/563d6d46-4ef0-42b5-a23e-654e56a4a71c.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 24">
                                             
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/378ea86e-41eb-4b35-a4c0-cad172417b7e.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 25">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1f7ca5e7-05a8-4861-950c-a09f8ab88c72.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 26">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ab755727-709a-406a-afa8-89047f17b670.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 27">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2998d3f2-b85f-43ee-98ea-e31ae60af884.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 28">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4692111f-4374-4437-8a72-e38a5ba72ae8.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 29">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/78a37b17-33d0-4932-b6dc-b3e39265873a.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 30">
+                                            
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6b910570-14b1-4034-ab99-965ad5e4d928.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 31">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/67584d00-7c2a-40a4-9fc6-6831795fbcec.jpeg" alt="Starting Rates for Detail Doctor in Gaffney, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -2795,7 +2982,7 @@ Trucks/SUVS and Large Vans start at $60
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="89228"
+                                aria-controls="89234"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">What&#x27;s the best way to reach you?</span>
@@ -2814,7 +3001,7 @@ Trucks/SUVS and Large Vans start at $60
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89228">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89234">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Give us a call or send us a text at (864) 619-5768. Thanks!</p>
                         </dd>
@@ -2826,7 +3013,7 @@ Trucks/SUVS and Large Vans start at $60
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="89229"
+                                aria-controls="89235"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">Do you provide free estimates?</span>
@@ -2845,7 +3032,7 @@ Trucks/SUVS and Large Vans start at $60
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89229">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89235">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Yes, we&#x27;ll always estimate the job for free. Just give us a call to get started.</p>
                         </dd>
@@ -2857,7 +3044,7 @@ Trucks/SUVS and Large Vans start at $60
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="89230"
+                                aria-controls="89236"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">How are you different?</span>
@@ -2876,7 +3063,7 @@ Trucks/SUVS and Large Vans start at $60
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89230">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="89236">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">We&#x27;re a customer-first company that will do whatever it takes to make sure the job is well done.</p>
                         </dd>
@@ -3379,57 +3566,57 @@ observer.observe(target)
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258384"
-                                                    name="258384"
+                                                    id="contact-service-258395"
+                                                    name="258395"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Starting Rates"
                                             />
-                                            <label for="contact-label-service-258384" class="ml-3 text-sm font-medium text-gray-700">Starting Rates</label>
+                                            <label for="contact-label-service-258395" class="ml-3 text-sm font-medium text-gray-700">Starting Rates</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258385"
-                                                    name="258385"
+                                                    id="contact-service-258396"
+                                                    name="258396"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Detailing"
                                             />
-                                            <label for="contact-label-service-258385" class="ml-3 text-sm font-medium text-gray-700">Interior Detailing</label>
+                                            <label for="contact-label-service-258396" class="ml-3 text-sm font-medium text-gray-700">Interior Detailing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258386"
-                                                    name="258386"
+                                                    id="contact-service-258397"
+                                                    name="258397"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Detailing"
                                             />
-                                            <label for="contact-label-service-258386" class="ml-3 text-sm font-medium text-gray-700">Exterior Detailing</label>
+                                            <label for="contact-label-service-258397" class="ml-3 text-sm font-medium text-gray-700">Exterior Detailing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258387"
-                                                    name="258387"
+                                                    id="contact-service-258398"
+                                                    name="258398"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Full Detail Service"
                                             />
-                                            <label for="contact-label-service-258387" class="ml-3 text-sm font-medium text-gray-700">Full Detail Service</label>
+                                            <label for="contact-label-service-258398" class="ml-3 text-sm font-medium text-gray-700">Full Detail Service</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258388"
-                                                    name="258388"
+                                                    id="contact-service-258399"
+                                                    name="258399"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Headlight Restoration"
                                             />
-                                            <label for="contact-label-service-258388" class="ml-3 text-sm font-medium text-gray-700">Headlight Restoration</label>
+                                            <label for="contact-label-service-258399" class="ml-3 text-sm font-medium text-gray-700">Headlight Restoration</label>
                                         </div>
                                         
                                     </div>
@@ -3458,57 +3645,57 @@ observer.observe(target)
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258384"
-                                                    name="258384"
+                                                    id="contact-service-258395"
+                                                    name="258395"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Starting Rates"
                                             />
-                                            <label for="contact-label-service-258384" class="ml-3 text-sm font-medium text-gray-700">Starting Rates</label>
+                                            <label for="contact-label-service-258395" class="ml-3 text-sm font-medium text-gray-700">Starting Rates</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258385"
-                                                    name="258385"
+                                                    id="contact-service-258396"
+                                                    name="258396"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Detailing"
                                             />
-                                            <label for="contact-label-service-258385" class="ml-3 text-sm font-medium text-gray-700">Interior Detailing</label>
+                                            <label for="contact-label-service-258396" class="ml-3 text-sm font-medium text-gray-700">Interior Detailing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258386"
-                                                    name="258386"
+                                                    id="contact-service-258397"
+                                                    name="258397"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Detailing"
                                             />
-                                            <label for="contact-label-service-258386" class="ml-3 text-sm font-medium text-gray-700">Exterior Detailing</label>
+                                            <label for="contact-label-service-258397" class="ml-3 text-sm font-medium text-gray-700">Exterior Detailing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258387"
-                                                    name="258387"
+                                                    id="contact-service-258398"
+                                                    name="258398"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Full Detail Service"
                                             />
-                                            <label for="contact-label-service-258387" class="ml-3 text-sm font-medium text-gray-700">Full Detail Service</label>
+                                            <label for="contact-label-service-258398" class="ml-3 text-sm font-medium text-gray-700">Full Detail Service</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-258388"
-                                                    name="258388"
+                                                    id="contact-service-258399"
+                                                    name="258399"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Headlight Restoration"
                                             />
-                                            <label for="contact-label-service-258388" class="ml-3 text-sm font-medium text-gray-700">Headlight Restoration</label>
+                                            <label for="contact-label-service-258399" class="ml-3 text-sm font-medium text-gray-700">Headlight Restoration</label>
                                         </div>
                                         
                                     </div>
